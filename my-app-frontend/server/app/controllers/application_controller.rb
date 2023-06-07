@@ -90,11 +90,10 @@ class ApplicationController < Sinatra::Base
       halt 404, { error: 'Meme not found' }.to_json
     end
   end
+  
+  
   post '/logout' do
     session.clear
     { message: 'User logged out successfully' }.to_json
   end
-  end
-
-
-
+  end  
